@@ -1,1 +1,65 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-y: hidden;
+
+}
+
+.outerwrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.container {
+  height: 100%;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: row;
+}
+
+.menu {
+  overflow-y: auto;
+  background: skyblue;
+  flex-basis: 20%;
+  flex-grow: 0;
+}
+
+.contentpane {
+  flex-grow: 1;
+}
+
+ul {
+  list-style: none;
+  font-family: "Century Gothic";
+  font-weight: bold;
+  font-size: 18px;
+  color: #EFF7F6;
+}
+
+li {
+  margin-bottom: 10px;
+
+}
+.menu-unit-number {
+  font-size: 25px;
+}
+
+a {
+  color: #EFF7F6;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
