@@ -22,7 +22,6 @@ body {
 
 .container {
   height: 100%;
-  overflow-y: scroll;
   display: flex;
   flex-direction: row;
 }
@@ -31,11 +30,14 @@ body {
   overflow-y: auto;
   background: skyblue;
   flex-basis: 20%;
+  flex-shrink: 0;
   flex-grow: 0;
 }
 
 .contentpane {
+  overflow-y: scroll;
   flex-grow: 1;
+  background: #F3F4F1;
 }
 
 ul {
@@ -50,6 +52,7 @@ li {
   margin-bottom: 10px;
 
 }
+
 .menu-unit-number {
   font-size: 25px;
 }
@@ -60,6 +63,6 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #F7D6E0;
 }
 
