@@ -13,7 +13,9 @@
     </ol>
   </div>
   <div class="contentpane">
+    <!--suppress AngularInvalidExpressionResultType -->
     <app-text-lesson *ngIf="selectedLesson?.type === lessonType.Text" [lesson]="selectedLesson"></app-text-lesson>
+    <!--suppress AngularInvalidExpressionResultType -->
     <app-video-lesson *ngIf="selectedLesson?.type === lessonType.Video" [lesson]="selectedLesson"></app-video-lesson>
   </div>
 </div>

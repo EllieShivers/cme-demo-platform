@@ -67,11 +67,6 @@ a:hover {
   cursor: pointer;
 }
 
-li .lesson-title {
-  font-weight: normal;
-  font-size: 16px;
-}
-
 .citation-wrapper {
   display: flex;
 }
