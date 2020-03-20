@@ -1,61 +1,23 @@
-
 <div class="outerwrapper">
-<div class="container">
-  <div class="menu">
-    (Options Button)
-
-    <ul>
-      <li>
-        <a routerLink="/">
-          Return to Front Page</a>
-    </li>
-      <li>
-        <a routerLink="/lesson/1">
-          <span class="menu-unit-number">Unit 1</span> <br>
-          Introduction
-        </a>
-      </li>
-      <li>
-        <a routerLink="/lesson/2">
-          <span class="menu-unit-number">Unit 2</span> <br>
-          Transgender 101
-        </a>
-      </li>
-      <li>
-        <a routerLink="/lesson/3">
-          <span class="menu-unit-number">Unit 3</span> <br>
-          Nonbinary 101
-        </a>
-      </li>
-      <li>
-        <a routerLink="/lesson/4">
-          <span class="menu-unit-number">Unit 4</span> <br>
-          Society and Marginalization
-        </a>
-      </li>
-      <li>
-        <a routerLink="/lesson/5">
-          <span class="menu-unit-number">Unit 5</span> <br>
-          Sexuality and Gender Identity
-        </a>
-      </li>
-      <li>
-        <a routerLink="/lesson/6">
-          <span class="menu-unit-number">Unit 6 </span> <br>
-          Clinical Care
-        </a>
-      </li>
-      <li>
-        <a routerLink="/lesson/7">
-          <span class="menu-unit-number">Unit 7</span> <br>
-          Cultivating Inclusivity
-        </a>
-      </li>
-    </ul>
-
+  <div class="container">
+    <div class="menu">
+      (Options Button)
+      <ul>
+        <li>
+          <a routerLink="/">
+            Return to Front Page</a>
+        </li>
+        <li *ngFor="let unit of course, let i = index">
+          <a (click)="selectUnit(unit)">
+          <span class="menu-unit-number">Unit {{i + 1}}</span> <br>
+            {{unit.title}}
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="contentpane">
+      <app-unit [unit]="selectedUnit" *ngIf="selectedUnit"></app-unit>
+      <app-main-page *ngIf="!selectedUnit"></app-main-page>
+    </div>
   </div>
-
-  <div class="contentpane">
-    <router-outlet></router-outlet>
-  </div>
-</div></div>
+</div>

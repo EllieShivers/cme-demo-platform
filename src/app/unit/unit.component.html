@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="menu">
+    <h1>Unit {{unit.order}}</h1>
+    <h2>{{unit.title}}</h2>
+    <hr>
+    <h2> Contents</h2>
+    <ol>
+      <li *ngFor="let lesson of unit.lessons">
+        <a (click)="selectLesson(lesson)">
+          {{ lesson.title }}
+        </a>
+      </li>
+    </ol>
+  </div>
+  <div class="contentpane">
+    <app-text-lesson *ngIf="selectedLesson?.type === lessonType.Text" [lesson]="selectedLesson"></app-text-lesson>
+    <app-video-lesson *ngIf="selectedLesson?.type === lessonType.Video" [lesson]="selectedLesson"></app-video-lesson>
+  </div>
+</div>

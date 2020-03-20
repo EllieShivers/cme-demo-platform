@@ -1,0 +1,26 @@
+
+.lessonwrapper{
+  margin: 20px;
+}
+
+.video-wrapper{
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+  color: #EFF7F6;
+  font-family: "Century Gothic", serif;
+  background: #035E7B;
+  box-shadow: 3px 3px 5px 6px #ccc;
+
+}
+
+.section-image {
+  padding: 20px;
+  width: 30%;
+}
+p {
+  font-size: larger;
+}
