@@ -27,6 +27,7 @@ body {
 }
 
 .menu {
+  padding-top: 40px;
   overflow-y: auto;
   background: #035E7B;
   flex-basis: 15%;
@@ -75,4 +76,9 @@ a:hover {
   margin-left: 20px;
   flex-basis: 50%;
   font-family: "Times New Roman", serif;
+}
+
+
+.lessonwrapper{
+  margin: 20px;
 }

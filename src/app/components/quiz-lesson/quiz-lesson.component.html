@@ -1,0 +1,24 @@
+<h1 xmlns="http://www.w3.org/1999/html">QUIZ: {{lesson.title}}</h1>
+<div class="lessonwrapper">
+
+  <div *ngFor="let question of lesson.questions, let i = index">
+    <div class="question-text">{{ i + 1 }}. {{question.questionText}}</div>
+    <div *ngIf="question.questionType === questionType.MultipleChoice">
+      <div class="question-answer" *ngFor="let answer of question.possibleAnswers, let i =index">
+        <input type="radio" id="{{answer}}" name="{{question.questionText}}" value="{{answer}}">
+        <label for="{{answer}}">{{answer}}</label>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="lesson.citations">
+    <hr>
+    <h2>
+      Citations
+    </h2>
+    <div class="citation-wrapper">
+      <div *ngFor="let citation of lesson.citations">
+        <div class="citation">{{citation.apaString}}</div>
+      </div>
+    </div>
+  </div>
+</div>

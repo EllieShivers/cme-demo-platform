@@ -7,6 +7,8 @@
     <ol>
       <li *ngFor="let lesson of unit.lessons">
         <a (click)="selectLesson(lesson)">
+          <span *ngIf="lesson.type === lessonType.Video">VIDEO:</span>
+          <span *ngIf="lesson.type === lessonType.Quiz">QUIZ:</span>
           {{ lesson.title }}
         </a>
       </li>
@@ -17,5 +19,7 @@
     <app-text-lesson *ngIf="selectedLesson?.type === lessonType.Text" [lesson]="selectedLesson"></app-text-lesson>
     <!--suppress AngularInvalidExpressionResultType -->
     <app-video-lesson *ngIf="selectedLesson?.type === lessonType.Video" [lesson]="selectedLesson"></app-video-lesson>
+    <!--suppress AngularInvalidExpressionResultType -->
+    <app-quiz-lesson *ngIf="selectedLesson?.type === lessonType.Quiz" [lesson]="selectedLesson"></app-quiz-lesson>
   </div>
 </div>

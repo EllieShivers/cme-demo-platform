@@ -7,6 +7,7 @@ import {unit03} from '../assets/lessons/unit03';
 import {unit07} from '../assets/lessons/unit07';
 import {unit04} from '../assets/lessons/unit04';
 import {unit05} from '../assets/lessons/unit05';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -20,5 +21,9 @@ export class AppComponent {
 
   selectUnit(unit: Unit) {
     this.selectedUnit = unit;
+  }
+
+  openFrontPage() {
+
   }
 }

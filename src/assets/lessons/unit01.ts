@@ -2,7 +2,8 @@ import {TextLesson} from '../../app/models/text-lesson';
 import {VideoLesson} from '../../app/models/video-lesson';
 import {Unit} from '../../app/models/unit';
 import {LessonType} from '../../app/models/lesson';
-import {ImageAsset, Position} from '../../app/models/image-asset';
+import {Position} from '../../app/models/image-asset';
+import {MultipleChoiceQuestion, QuestionType, QuizLesson} from '../../app/models/quiz-lesson';
 
 let lesson0101: TextLesson =
   {
@@ -35,7 +36,7 @@ let lesson0102: VideoLesson = {
   id: 102,
   type: LessonType.Video,
   title: "Why does this matter?",
-  videoEmbedCode: "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/t7xHamn5inQ\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n",
+  videoEmbedCode: "<!--suppress HtmlDeprecatedAttribute --><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/t7xHamn5inQ\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n",
   transcript: "This is a demo only. No transcript available.",
 
 };
@@ -51,7 +52,7 @@ let lesson0103: TextLesson = {
     },
     {
       header: 'Transgender, Nonbinary, and Cisgender',
-      body: 'There are three key terms that must be defined before anything else. Transgender, nonbinary, and cisgender. Most commonly, the word transgender refers to an individual whose gender identity does not align with the sex they were assigned at birth. Being nonbinary means that an individual’s gender identity is outside the male-female binary system. Nonbinary is not a third gender, but an encompassing term for someone who is at some point on a spectrum between male and female or neither male nor female at all. This may be in the form of a third gender, or it may be a statement of having no gender. Cisgender is a term that refers to someone whose gender identity aligns with their sex assigned at birth—that is to say, it is anyone who is not transgender or nonbinary. While it will eventually be given some qualifications to use, we employ the phrase “sex assigned at birth” here as starting terminology acknowledging what sex was observed at birth, in that it was a label applied by someone else base on observance of sex characteristics which did not accurately reflect an individual’s reality and which the individual had no say regarding.'
+      body: 'There are three key terms that must be defined before anything else. <strong>Transgender</strong>, <strong>nonbinary</strong>, and <strong>cisgender</strong>. Most commonly, the word transgender refers to an individual whose gender identity does not align with the sex they were assigned at birth. Being nonbinary means that an individual’s gender identity is outside the male-female binary system. Nonbinary is not a third gender, but an encompassing term for someone who is at some point on a spectrum between male and female or neither male nor female at all. This may be in the form of a third gender, or it may be a statement of having no gender. Cisgender is a term that refers to someone whose gender identity aligns with their sex assigned at birth—that is to say, it is anyone who is not transgender or nonbinary. While it will eventually be given some qualifications to use, we employ the phrase “sex assigned at birth” here as starting terminology acknowledging what sex was observed at birth, in that it was a label applied by someone else base on observance of sex characteristics which did not accurately reflect an individual’s reality and which the individual had no say regarding.'
     },
     {
       header: 'Identity',
@@ -70,8 +71,44 @@ let lesson0103: TextLesson = {
   ]
 };
 
-let lesson0104: TextLesson = {
-  id: 103,
+let lesson0104q1: MultipleChoiceQuestion = {
+  questionType: QuestionType.MultipleChoice,
+  questionText: 'According to McPhail, et. al, what are the two main factors in physicians denying care to transgender patients?',
+  possibleAnswers: [
+    'Lack of physician knowledge and transphobia.',
+    'Lack of both resources and training.',
+    'Religious beliefs and lack of training.',
+    'Transphobia and lack of resources.'
+  ],
+  correctAnswer: 0
+};
+
+let lesson0104q2: MultipleChoiceQuestion = {
+  questionType: QuestionType.MultipleChoice,
+  questionText: 'Presuming they all self identify as transgender, which of the following people should be considered transgender?',
+  possibleAnswers: [
+    'Debbie, who was assigned male at birth, received an official diagnosis from a mental health professional, and has undergone genital .',
+    'Sam, who was assigned female at birth and identifies as a trans man, but does desire hormone therapy or surgeries.',
+    'Skye, who was',
+    'All of the above.'
+  ],
+  correctAnswer: 3
+};
+
+let lesson0104: QuizLesson = {
+  id: 104,
+  title: 'General Concepts',
+  type: LessonType.Quiz,
+  questions: [ lesson0104q1, lesson0104q2 ],
+  citations: [
+    {
+      apaString: 'Deborah Mcphail, Marina Rountree-James, and Ian Whetter. "Addressing Gaps in Physician Knowledge regarding Transgender Health and Healthcare through Medical Education." Canadian Medical Education Journal 7.2 (2016): 70-78.'
+    }
+  ]
+};
+
+let lesson0105: TextLesson = {
+  id: 105,
   title: 'Conclusion',
   type: LessonType.Text,
   sections: [
@@ -92,8 +129,9 @@ let lesson0104: TextLesson = {
     }
   ]
 };
+
 export const unit01: Unit = {
   title: "Introduction",
   order: 1,
-  lessons: [lesson0101, lesson0102, lesson0103, lesson0104]
+  lessons: [lesson0101, lesson0102, lesson0103, lesson0104, lesson0105]
 };

@@ -1,4 +1,4 @@
-import {Citation, Lesson, LessonType} from './lesson';
+import {Citation, Lesson} from './lesson';
 import {ImageAsset} from './image-asset';
 
 export class TextLesson extends Lesson {

@@ -1,5 +1,4 @@
 import {Component, Input, OnDestroy, OnInit} from '@angular/core';
-import {Lesson} from '../../models/lesson';
 
 @Component({
   selector: 'app-lesson',

@@ -1,4 +1,4 @@
-import {Lesson, LessonType} from './lesson';
+import {Lesson} from './lesson';
 
 export class QuizLesson extends Lesson {
   questions: Question[];
@@ -6,19 +6,18 @@ export class QuizLesson extends Lesson {
   title: string;
 }
 
-
 class Question {
-  questionType: number;
-  correctFeedback?: string;
-  incorrectFeedback?: string;
+  questionType: QuestionType;
+  questionText: string;
+  possibleAnswers?: string[]
 }
 
-class MultipleChoiceQuestion extends Question {
-  questionText: string;
+export class MultipleChoiceQuestion extends Question {
   possibleAnswers: string[];
   correctAnswer: number; // Should correspond with the index of the correct answer in possibleAnswers. TODO Need to handle this differently.
 }
 
 export enum QuestionType {
-  MultipleChoice
+  MultipleChoice='Multiple Choice',
+  TrueFalse='True False'
 }

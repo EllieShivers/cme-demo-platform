@@ -24,3 +24,15 @@ h1 {
 p {
   font-size: larger;
 }
+
+.bodylink {
+
+}
+.bodylink a {
+  color: black;
+}
+
+.bodylink a:hover {
+  color: #035E7B;
+  text-decoration: underline;
+}

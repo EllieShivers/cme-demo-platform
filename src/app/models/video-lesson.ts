@@ -1,4 +1,4 @@
-import {Lesson, LessonType} from './lesson';
+import {Lesson} from './lesson';
 
 export class VideoLesson extends Lesson {
   videoEmbedCode: string;

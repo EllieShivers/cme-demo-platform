@@ -1,11 +1,12 @@
 <div class="outerwrapper">
   <div class="container">
     <div class="menu">
-      (Options Button)
       <ul>
         <li>
-          <a routerLink="/">
-            Return to Front Page</a>
+          <a (click)="openFrontPage()">
+            Return to Front Page
+          </a>
+          <hr>
         </li>
         <li *ngFor="let unit of course, let i = index">
           <a (click)="selectUnit(unit)">

@@ -1,0 +1,21 @@
+
+.coursetitle {
+  font-size: 48px;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  vertical-align: center;
+  color: #EFF7F6;
+  font-family: "Century Gothic", serif;
+  background: #237E9B;
+  box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: #035E7B;
+  text-decoration: underline;
+}

@@ -5,8 +5,9 @@
     <h2>{{section.header}}</h2>
     <div *ngIf="section.imageAsset != null">
       <img src="assets/images/{{section.imageAsset.fileName}}" alt="{{section.imageAsset.altText}}"
-           class="section-image image-{{section.imageAsset.position}}"></div>
-    <p>{{section.body}}</p>
+           class="section-image image-{{section.imageAsset.position}}">
+    </div>
+    <p [innerHTML]="section.body"></p>
   </div>
 
   <div *ngIf="lesson.citations">

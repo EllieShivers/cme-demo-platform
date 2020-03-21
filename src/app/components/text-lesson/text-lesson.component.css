@@ -5,3 +5,12 @@
 .image-left {
   float: left;
 }
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: #035E7B;
+  text-decoration: underline;
+}
