@@ -1,15 +1,39 @@
+<!--suppress ALL -->
 <h1 xmlns="http://www.w3.org/1999/html">QUIZ: {{lesson.title}}</h1>
 <div class="lessonwrapper">
 
-  <div *ngFor="let question of lesson.questions, let i = index">
+  <div class="questionwrapper radiocontainer"
+       *ngFor="let question of lesson.questions, let i = index, let feedback = null">
+
     <div class="question-text">{{ i + 1 }}. {{question.questionText}}</div>
+
     <div *ngIf="question.questionType === questionType.MultipleChoice">
       <div class="question-answer" *ngFor="let answer of question.possibleAnswers, let i =index">
-        <input type="radio" id="{{answer}}" name="{{question.questionText}}" value="{{answer}}">
-        <label for="{{answer}}">{{answer}}</label>
+        <input class="radio" type="radio" id="{{answer}}{{i}}" name="{{question.questionText}}" value="{{answer}}"
+               (click)="feedback = checkMCAnswer($event.target.value, i, question.correctAnswer)">
+        <label for="{{answer}}{{i}}">{{answer}}</label>
       </div>
     </div>
+
+    <div *ngIf="question.questionType === questionType.TrueFalse">
+      <div class="question-answer">
+        <input class="radio" type="radio" id="true{{i}}" name="{{question.questionText}}" value="true"
+               (click)="feedback = checkTFAnswer($event.target.value, question.correctAnswer)">
+        <label for="true{{i}}">True</label>
+      </div>
+      <div class="question-answer">
+        <input class="radio" type="radio" id="false{{i}}" name="{{question.questionText}}" value="false"
+               (click)="feedback = checkTFAnswer($event.target.value, question.correctAnswer)">
+        <label for="false{{i}}">False</label>
+      </div>
+    </div>
+
+    <div class="feedback" *ngIf="feedback" [ngClass]="{'correct' : feedback === 'Correct Answer', 'incorrect' : feedback === 'Incorrect Answer'}">
+      {{feedback}}
+    </div>
   </div>
+
+
   <div *ngIf="lesson.citations">
     <hr>
     <h2>
@@ -17,8 +41,18 @@
     </h2>
     <div class="citation-wrapper">
       <div *ngFor="let citation of lesson.citations">
-        <div class="citation">{{citation.apaString}}</div>
+        <div class="citation">
+          <div *ngIf="citation.link">
+            <a href="{{citation.link}}" *ngIf="citation.link" target="_blank">
+              {{citation.apaString}}
+            </a>
+          </div>
+          <div *ngIf="!citation.link">
+            {{citation.apaString}}
+          </div>
+        </div>
       </div>
     </div>
   </div>
+  <div class="spacer"></div>
 </div>

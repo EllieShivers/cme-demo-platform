@@ -1,6 +1,6 @@
 import {Component, Input, OnChanges, OnInit} from '@angular/core';
-import {Unit} from '../models/unit';
-import {Lesson, LessonType} from '../models/lesson';
+import {Unit} from '../../models/unit';
+import {Lesson, LessonType} from '../../models/lesson';
 
 @Component({
   selector: 'app-unit',

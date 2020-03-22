@@ -7,7 +7,9 @@
       <img src="assets/images/{{section.imageAsset.fileName}}" alt="{{section.imageAsset.altText}}"
            class="section-image image-{{section.imageAsset.position}}">
     </div>
-    <p [innerHTML]="section.body"></p>
+    <div *ngFor="let bodyLine of section.body">
+      <p [innerHTML]="bodyLine"></p>
+    </div>
   </div>
 
   <div *ngIf="lesson.citations">
@@ -16,9 +18,19 @@
       Citations
     </h2>
     <div class="citation-wrapper">
-    <div *ngFor="let citation of lesson.citations">
-      <div class="citation">{{citation.apaString}}</div>
-    </div>
+      <div *ngFor="let citation of lesson.citations">
+        <div class="citation">
+          <div *ngIf="citation.link">
+            <a href="{{citation.link}}" *ngIf="citation.link" target="_blank">
+              {{citation.apaString}}
+            </a>
+          </div>
+          <div *ngIf="!citation.link">
+            {{citation.apaString}}
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+  <div class="spacer"></div>
 </div>

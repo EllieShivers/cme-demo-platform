@@ -1,4 +1,4 @@
-<h1 class="coursetitle">{{lesson.title}}</h1>
+<h1>{{lesson.title}}</h1>
 
 <div class="lessonwrapper">
   <div class="video-wrapper">
@@ -6,7 +6,7 @@
   </div>
 
   <h2>Transcript</h2>
-  <p>{{lesson.transcript}}</p>
+  <p *ngFor="let transcriptSection of lesson.transcript" [innerHTML]="transcriptSection"></p>
 
   <div *ngIf="lesson.citations">
     <hr>
@@ -15,8 +15,18 @@
     </h2>
     <div class="citation-wrapper">
       <div *ngFor="let citation of lesson.citations">
-        <div class="citation">{{citation.apaString}}</div>
+        <div class="citation">
+          <div *ngIf="citation.link">
+            <a href="{{citation.link}}" *ngIf="citation.link" target="_blank">
+              {{citation.apaString}}
+            </a>
+          </div>
+          <div *ngIf="!citation.link">
+            {{citation.apaString}}
+          </div>
+        </div>
       </div>
     </div>
   </div>
+  <div class="spacer"></div>
 </div>

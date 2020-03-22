@@ -19,4 +19,25 @@ export class QuizLessonComponent extends LessonComponent implements OnInit {
   ngOnInit() {
   }
 
+  checkMCAnswer(value: string, currentAnswer: number, correctAnswer): string {
+    if((currentAnswer + 1) == correctAnswer) {
+      console.log('CORRECT: ' + value);
+      return 'Correct Answer';
+    }
+    else {
+      console.log('WRONG: ' + value);
+      return 'Incorrect Answer';
+    }
+  }
+
+  checkTFAnswer(value, correctAnswer:boolean): string{
+    let parsedBoolean = (value === 'true');
+
+    if (parsedBoolean === correctAnswer) {
+      return 'Correct Answer';
+    } else return 'Incorrect Answer';
+  }
+
+  getFeedback(){} // TODO: Implement Feedback
+
 }
