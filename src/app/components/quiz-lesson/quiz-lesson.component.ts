@@ -1,5 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {LessonComponent} from '../lesson/lesson.component';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {LessonComponent, NavigateLessons} from '../lesson/lesson.component';
 import {QuizLesson, QuestionType} from '../../models/quiz-lesson';
 
 @Component({
@@ -11,6 +11,8 @@ export class QuizLessonComponent extends LessonComponent implements OnInit {
 
   @Input() lesson: QuizLesson;
   public questionType = QuestionType;
+  @Input() firstLessonInUnit: boolean;
+  @Input() lastLessonInUnit: boolean;
 
   constructor() {
     super();
@@ -38,6 +40,13 @@ export class QuizLessonComponent extends LessonComponent implements OnInit {
     } else return 'Incorrect Answer';
   }
 
-  getFeedback(){} // TODO: Implement Feedback
+  @Output() changedLesson = new EventEmitter<number>();
 
+  goToNext(): void{
+    this.changedLesson.emit(NavigateLessons.next);
+  }
+
+  goToPrevious(): void{
+    this.changedLesson.emit(NavigateLessons.previous);
+  }
 }

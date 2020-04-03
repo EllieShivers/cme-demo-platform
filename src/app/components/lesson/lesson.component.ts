@@ -15,3 +15,7 @@ export class LessonComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {}
 }
 
+export enum NavigateLessons {
+  previous,
+  next
+}

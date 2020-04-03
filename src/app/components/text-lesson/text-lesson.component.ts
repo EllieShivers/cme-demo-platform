@@ -1,6 +1,7 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {TextLesson} from '../../models/text-lesson';
-import {LessonComponent} from '../lesson/lesson.component';
+import {LessonComponent, NavigateLessons} from '../lesson/lesson.component';
+import { Position } from '../../models/image-asset';
 
 @Component({
   selector: 'app-text-lesson',
@@ -10,12 +11,25 @@ import {LessonComponent} from '../lesson/lesson.component';
 export class TextLessonComponent extends LessonComponent implements OnInit {
 
   @Input() lesson: TextLesson;
+  @Input() firstLessonInUnit: boolean;
+  @Input() lastLessonInUnit: boolean;
+
+  position = Position;
 
   constructor() {
     super();
   }
 
-  ngOnInit() {
+  ngOnInit() {  }
+
+  @Output() changedLesson = new EventEmitter<number>();
+
+  goToNext(): void{
+    this.changedLesson.emit(NavigateLessons.next);
   }
 
+  goToPrevious(): void{
+    this.changedLesson.emit(NavigateLessons.previous);
+  }
 }
+

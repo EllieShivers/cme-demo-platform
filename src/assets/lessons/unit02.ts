@@ -4,7 +4,7 @@ import {Citation} from '../../app/models/lesson';
 import {VideoLesson} from '../../app/models/video-lesson';
 
 let lesson0201: TextLesson = new TextLesson(
-  'Unit Introduction',
+  'Unit 2 Introduction',
   [
     new Section(
       'Welcome to Unit 2 - Transgender 101',
@@ -409,9 +409,26 @@ let lesson0215: TextLesson = new TextLesson(
   ]
 );
 
+let lesson0216: TextLesson = new TextLesson(
+  'Unit 2 Conclusion',
+  [
+    new Section(
+      'Summary',
+      [
+        'Almost everything in this unit was discussed with the intent of going into additional detail in future units, starting with unit 3 and building upon the information established here to provide more context to nonbinary identities. Social issues surrounding discrimination will be delved into in more depth in unit 4. The brief mention of sexuality takes center stage in unit 5, and unit 6 is all about clinical care. Some of the recommendations mentioned or hinted are then pulled together in unit 7.'
+      ]
+    ),
+    new Section(
+      'Moving to Unit 3',
+      [
+        'This is the end of unit 2. Moving to unit 3, we will tie in the discussions here to the nonbinary experience.'
+      ]
+    )
+  ]
+);
 
 export const unit02: Unit = {
   title: 'Transgender 101',
   order: 2,
-  lessons: [lesson0201, lesson0202, lesson0203, lesson0204, lesson0205, lesson0206, lesson0207, lesson0208, lesson0209, lesson0210, lesson0211, lesson0212, lesson0213, lesson0214, lesson0215]
+  lessons: [lesson0201, lesson0202, lesson0203, lesson0204, lesson0205, lesson0206, lesson0207, lesson0208, lesson0209, lesson0210, lesson0211, lesson0212, lesson0213, lesson0214, lesson0215, lesson0216]
 };

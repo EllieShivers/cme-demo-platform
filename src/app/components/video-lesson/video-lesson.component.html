@@ -8,6 +8,20 @@
   <h2>Transcript</h2>
   <p *ngFor="let transcriptSection of lesson.transcript" [innerHTML]="transcriptSection"></p>
 
+
+  <hr>
+
+  <div class="button-wrapper">
+    <div class="button-row-item">
+      <button (click)="goToPrevious()" *ngIf="!firstLessonInUnit">Return to Previous Lesson</button>
+    </div>
+
+    <div class="button-row-item">
+      <button (click)="goToNext()" *ngIf="!lastLessonInUnit">Continue to Next Lesson</button>
+    </div>
+  </div>
+
+
   <div *ngIf="lesson.citations">
     <hr>
     <h2>

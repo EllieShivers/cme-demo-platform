@@ -18,10 +18,8 @@ h1 {
 
 }
 
-.section-image {
-  padding: 20px;
-  width: 30%;
-}
+
+
 p {
   font-size: larger;
 }
@@ -47,4 +45,33 @@ p {
 
 .spacer {
   height: 100px;
+}
+
+.button-wrapper {
+  text-align: center;
+  display: flex;
+}
+
+.button-row-item {
+  width: 50%;
+}
+
+button {
+  color: white;
+  background-color: #035E7B;
+  width: 500px;
+  font-size: x-large;
+  box-shadow: black;
+  height: fit-content;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 20px;
+}
+
+button:hover {
+  background-color: #338EAB;
+}
+
+button:disabled {
+  background-color: dimgrey;
 }

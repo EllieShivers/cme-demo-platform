@@ -29,10 +29,21 @@
     </div>
 
     <div class="feedback" *ngIf="feedback" [ngClass]="{'correct' : feedback === 'Correct Answer', 'incorrect' : feedback === 'Incorrect Answer'}">
-      {{feedback}}
+      {{feedback}} - {{question.feedback[0]}}
     </div>
   </div>
 
+  <hr>
+
+  <div class="button-wrapper">
+    <div class="button-row-item">
+      <button (click)="goToPrevious()" *ngIf="!firstLessonInUnit">Return to Previous Lesson</button>
+    </div>
+
+    <div class="button-row-item">
+      <button (click)="goToNext()" *ngIf="!lastLessonInUnit">Continue to Next Lesson</button>
+    </div>
+  </div>
 
   <div *ngIf="lesson.citations">
     <hr>

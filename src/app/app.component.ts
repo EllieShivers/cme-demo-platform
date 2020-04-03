@@ -15,7 +15,7 @@ import {unit05} from '../assets/lessons/unit05';
 })
 
 export class AppComponent {
-  title = 'cme-demo-platform';
+  title = 'Transgender and Nonbinary Care from a Social Perspective';
   course: Unit[] = [unit01, unit02, unit03, unit04, unit05, unit06, unit07];
   selectedUnit: Unit;
 
@@ -24,6 +24,6 @@ export class AppComponent {
   }
 
   openFrontPage() {
-
+    this.selectedUnit = null;
   }
 }

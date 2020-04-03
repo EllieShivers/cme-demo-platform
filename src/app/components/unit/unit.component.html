@@ -5,8 +5,8 @@
     <hr>
     <h2> Contents</h2>
     <ol>
-      <li *ngFor="let lesson of unit.lessons">
-        <a (click)="selectLesson(lesson)">
+      <li *ngFor="let lesson of unit.lessons; let i = index" [ngClass]="{'lessonselected' : lesson === selectedLesson}"(click)="selectLesson(lesson, i)">
+        <a>{{i+1}}.
           <span *ngIf="lesson.type === lessonType.Video">VIDEO:</span>
           <span *ngIf="lesson.type === lessonType.Quiz">QUIZ:</span>
           {{ lesson.title }}
@@ -16,10 +16,25 @@
   </div>
   <div class="contentpane">
     <!--suppress AngularInvalidExpressionResultType -->
-    <app-text-lesson *ngIf="selectedLesson?.type === lessonType.Text" [lesson]="selectedLesson"></app-text-lesson>
+    <app-text-lesson *ngIf="selectedLesson?.type === lessonType.Text"
+                     [lesson]="selectedLesson"
+                     [firstLessonInUnit]="firstLessonInUnit"
+                     [lastLessonInUnit]="lastLessonInUnit"
+                     (changedLesson)="onChangedLesson($event)">
+    </app-text-lesson>
     <!--suppress AngularInvalidExpressionResultType -->
-    <app-video-lesson *ngIf="selectedLesson?.type === lessonType.Video" [lesson]="selectedLesson"></app-video-lesson>
+    <app-video-lesson *ngIf="selectedLesson?.type === lessonType.Video"
+                      [lesson]="selectedLesson"
+                      [firstLessonInUnit]="firstLessonInUnit"
+                      [lastLessonInUnit]="lastLessonInUnit"
+                      (changedLesson)="onChangedLesson($event)">
+    </app-video-lesson>
     <!--suppress AngularInvalidExpressionResultType -->
-    <app-quiz-lesson *ngIf="selectedLesson?.type === lessonType.Quiz" [lesson]="selectedLesson"></app-quiz-lesson>
+    <app-quiz-lesson *ngIf="selectedLesson?.type === lessonType.Quiz"
+                     [lesson]="selectedLesson"
+                     [firstLessonInUnit]="firstLessonInUnit"
+                     [lastLessonInUnit]="lastLessonInUnit"
+                     (changedLesson)="onChangedLesson($event)">
+    </app-quiz-lesson>
   </div>
 </div>

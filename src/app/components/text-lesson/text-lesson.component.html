@@ -1,16 +1,39 @@
 <h1>{{lesson.title}}</h1>
 <div class="lessonwrapper">
 
-  <div *ngFor="let section of lesson.sections">
+  <div *ngFor="let section of lesson.sections" class="clear-floats">
     <h2>{{section.header}}</h2>
-    <div *ngIf="section.imageAsset != null">
-      <img src="assets/images/{{section.imageAsset.fileName}}" alt="{{section.imageAsset.altText}}"
+
+    <div *ngIf="section.imageAsset != null && section.imageAsset.position != position.below">
+      <img src="assets/images/{{section.imageAsset.fileName}}" alt="{{section.imageAsset.altText}}" title="{{section.imageAsset.altText}}"
            class="section-image image-{{section.imageAsset.position}}">
     </div>
+
     <div *ngFor="let bodyLine of section.body">
       <p [innerHTML]="bodyLine"></p>
     </div>
+
+    <div *ngIf="section.imageAsset != null && section.imageAsset.position === position.below" class="image-wrapper">
+      <img src="assets/images/{{section.imageAsset.fileName}}" alt="{{section.imageAsset.altText}}" title="{{section.imageAsset.altText}}"
+           class="section-image image-{{section.imageAsset.position}}"><br>
+      <span class="image-caption" *ngIf="section.imageAsset.caption">{{section.imageAsset.caption}}</span>
+    </div>
+
   </div>
+
+
+  <hr>
+
+  <div class="button-wrapper">
+    <div class="button-row-item">
+      <button (click)="goToPrevious()" *ngIf="!firstLessonInUnit">Return to Previous Lesson</button>
+    </div>
+
+    <div class="button-row-item">
+      <button (click)="goToNext()" *ngIf="!lastLessonInUnit">Continue to Next Lesson</button>
+    </div>
+  </div>
+
 
   <div *ngIf="lesson.citations">
     <hr>

@@ -7,7 +7,7 @@ import {MultipleChoiceQuestion, QuizLesson, TrueFalseQuestion} from '../../app/m
 
 let lesson0101: TextLesson =
   {
-    title: 'Unit Introduction',
+    title: 'Unit 1 Introduction',
     type: LessonType.Text,
     sections: [
       {
@@ -125,7 +125,7 @@ let lesson0104: TextLesson = {
         'The relationship between being transgender and nonbinary also deserves extra consideration, and this will be a topic that is returned to throughout the course. While many, if not most, people who identify as nonbinary also identify as transgender, this is not always the case. This illustrates a prime example of why approaching people individually is important. Some transgender people are nonbinary, some transgender people are binary. Some nonbinary people identify as transgender, some do not. Note that neither of these terms is indicative of whether or not someone is seeking medical transition, which will be discussed further in the following units as well.'],
       imageAsset: {
         'fileName': 'venndiagram.jpg',
-        'position': Position.left,
+        'position': Position.below,
         'altText': 'Venn Diagram of Transgender and Nonbinary Overlap',
         'caption': 'This diagram is for illustrative purposes only and does not represent actual data.'
       }
@@ -146,10 +146,7 @@ let lesson0105: QuizLesson = new QuizLesson(
       ],
       1,
       [
-        'Mcphail, et. all cited lack of physician knowledge and transphobia as the reasons for denial of care.',
-        'Lack of resources was not considered one of the reasons for denial of care. Lack of training can be considered to be part of the issue discussed, but not cited as one of the primary issues explicitly.',
-        'Religious beliefs may inform transphobia, but were not specifically mentioned. Lack of training can be considered to be part of the issue discussed, but not cited as one of the primary issues explicitly.',
-        'Transphobia was cited as one of the reasons for denial of care, but lack of resources was not.'
+        'Mcphail, et. all cited lack of physician knowledge and transphobia as the reasons for denial of care.'
       ]
     ),
     new MultipleChoiceQuestion(
@@ -162,14 +159,13 @@ let lesson0105: QuizLesson = new QuizLesson(
       ],
       4,
       [
-        '', '', '',
-        'If someone identifies as transgender, that person <strong>IS</strong> transgender.'
+        'If someone identifies as transgender, that person IS transgender, therefore all individuals above are considered transgender.'
       ]
     ),
     new TrueFalseQuestion(
       'All nonbinary people identify as transgender.',
       false,
-      'While likely most nonbinary people identify as transgender, not all do, and you should not use terms for your patients they do not self-identify with.'
+      ['While (probably) most nonbinary people identify as transgender, not all do, and you should not use terms for your patients they do not self-identify with.']
     )
   ],
   [
@@ -180,7 +176,7 @@ let lesson0105: QuizLesson = new QuizLesson(
 );
 
 let lesson0106: TextLesson = {
-  title: 'Unit Conclusion',
+  title: 'Unit 1 Conclusion',
   type: LessonType.Text,
   sections: [
     {

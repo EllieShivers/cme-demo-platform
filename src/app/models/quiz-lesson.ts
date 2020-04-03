@@ -32,7 +32,7 @@ export class MultipleChoiceQuestion extends Question {
 }
 
 export class TrueFalseQuestion extends Question {
-  constructor(questionText: string, correctAnswer: boolean, feedback: string){
+  constructor(questionText: string, correctAnswer: boolean, feedback: string[]){
     super();
     this.questionType = QuestionType.TrueFalse;
     this.questionText = questionText;
@@ -40,7 +40,7 @@ export class TrueFalseQuestion extends Question {
     if (feedback) this.feedback = feedback;
   }
   correctAnswer: boolean;
-  feedback?: string;
+  feedback?: string[];
 }
 
 export enum QuestionType {
