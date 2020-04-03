@@ -1,7 +1,7 @@
 import {Unit} from '../../app/models/unit';
 import {TextLesson} from '../../app/models/text-lesson';
 import {LessonType} from '../../app/models/lesson';
-import {MultipleChoiceQuestion, QuestionType, QuizLesson, TrueFalseQuestion} from '../../app/models/quiz-lesson';
+import {MultipleChoiceQuestion, QuizLesson, TrueFalseQuestion} from '../../app/models/quiz-lesson';
 
 
 let lesson01: TextLesson = {

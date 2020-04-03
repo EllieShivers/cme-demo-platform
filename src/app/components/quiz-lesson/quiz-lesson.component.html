@@ -3,33 +3,36 @@
 <div class="lessonwrapper">
 
   <div class="questionwrapper radiocontainer"
-       *ngFor="let question of lesson.questions, let i = index, let feedback = null">
+       *ngFor="let question of lesson.questions, let questionIndex = index, let feedback = null">
 
-    <div class="question-text">{{ i + 1 }}. {{question.questionText}}</div>
+    <div class="question-text">{{ questionIndex + 1 }}. {{question.questionText}}</div>
 
     <div *ngIf="question.questionType === questionType.MultipleChoice">
-      <div class="question-answer" *ngFor="let answer of question.possibleAnswers, let i =index">
-        <input class="radio" type="radio" id="{{answer}}{{i}}" name="{{question.questionText}}" value="{{answer}}"
-               (click)="feedback = checkMCAnswer($event.target.value, i, question.correctAnswer)">
-        <label for="{{answer}}{{i}}">{{answer}}</label>
+      <div class="question-answer" *ngFor="let answer of question.possibleAnswers, let answerIndex =index">
+        <input class="radio" type="radio" id="{{answer}}{{answerIndex}}" name="{{question.questionText}}" value="{{answerIndex}}"
+               (click)="selectAndCheckAnswer(answerIndex + 1, questionIndex)">
+        <label for="{{answer}}{{answerIndex}}">{{answer}}</label>
       </div>
     </div>
 
     <div *ngIf="question.questionType === questionType.TrueFalse">
       <div class="question-answer">
-        <input class="radio" type="radio" id="true{{i}}" name="{{question.questionText}}" value="true"
-               (click)="feedback = checkTFAnswer($event.target.value, question.correctAnswer)">
-        <label for="true{{i}}">True</label>
+        <input class="radio" type="radio" id="true{{questionIndex}}" name="{{question.questionText}}" value="true"
+               (click)="selectAndCheckAnswer(true, questionIndex)">
+        <label for="true{{questionIndex}}">True</label>
       </div>
       <div class="question-answer">
-        <input class="radio" type="radio" id="false{{i}}" name="{{question.questionText}}" value="false"
-               (click)="feedback = checkTFAnswer($event.target.value, question.correctAnswer)">
-        <label for="false{{i}}">False</label>
+        <input class="radio" type="radio" id="false{{questionIndex}}" name="{{question.questionText}}" value="false"
+               (click)="selectAndCheckAnswer(false, questionIndex)">
+        <label for="false{{questionIndex}}">False</label>
       </div>
     </div>
 
-    <div class="feedback" *ngIf="feedback" [ngClass]="{'correct' : feedback === 'Correct Answer', 'incorrect' : feedback === 'Incorrect Answer'}">
-      {{feedback}} - {{question.feedback[0]}}
+    <div class="feedback" *ngIf="selectedAnswers[questionIndex] != 'UNANSWERED'"
+         [ngClass]="{
+         'correct' : selectedAnswers[questionIndex] === question.correctAnswer,
+         'incorrect' : selectedAnswers[questionIndex] != question.correctAnswer}">
+      {{selectedAnswers[questionIndex] === lesson.questions[questionIndex].correctAnswer ? 'Correct Answer' : 'Incorrect Answer'}} - {{question.feedback[0]}}
     </div>
   </div>
 

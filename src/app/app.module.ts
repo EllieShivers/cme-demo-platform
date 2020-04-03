@@ -10,7 +10,7 @@ import { VideoLessonComponent } from './components/video-lesson/video-lesson.com
 import { TextLessonComponent } from './components/text-lesson/text-lesson.component';
 import { QuizLessonComponent } from './components/quiz-lesson/quiz-lesson.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import {MAT_RADIO_DEFAULT_OPTIONS, MatRadioModule} from '@angular/material';
+import {MatRadioModule} from '@angular/material';
 
 @NgModule({
   declarations: [

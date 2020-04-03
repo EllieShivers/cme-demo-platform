@@ -27,6 +27,7 @@ export class UnitComponent implements OnInit, OnChanges {
 
   selectLesson(lesson: Lesson, index: number) {
 
+    // noinspection RedundantIfStatementJS
     if (this.unit.lessons[0] === lesson) {
       this.firstLessonInUnit = true;
     }
@@ -60,7 +61,6 @@ export class UnitComponent implements OnInit, OnChanges {
 
   @HostListener('document:keydown', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
-    console.log(event);
     if (event.key === "ArrowRight" && this.currentLessonIndex < this.unit.lessons.length -1) {
       this.onChangedLesson(NavigateLessons.next);
     }

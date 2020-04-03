@@ -10,35 +10,36 @@ export class QuizLesson extends Lesson {
   questions: Question[];
 }
 
-class Question {
-  constructor() {
-  }
+interface Question {
   questionType: QuestionType;
   questionText: string;
+  correctAnswer: any;
 }
 
-export class MultipleChoiceQuestion extends Question {
+export class MultipleChoiceQuestion implements Question {
   constructor(questionText: string, possibleAnswers: string[], correctAnswer: number, feedback: string[]) {
-    super();
     this.questionType = QuestionType.MultipleChoice;
     this.questionText = questionText;
     this.possibleAnswers = possibleAnswers;
     this.correctAnswer = correctAnswer;
     if (feedback) this.feedback = feedback;
   }
+  questionType: QuestionType;
+  questionText: string;
   feedback?: string[];
   possibleAnswers: string[];
   correctAnswer: number;
 }
 
-export class TrueFalseQuestion extends Question {
+export class TrueFalseQuestion implements Question {
   constructor(questionText: string, correctAnswer: boolean, feedback: string[]){
-    super();
     this.questionType = QuestionType.TrueFalse;
     this.questionText = questionText;
     this.correctAnswer = correctAnswer;
     if (feedback) this.feedback = feedback;
   }
+  questionType: QuestionType;
+  questionText: string;
   correctAnswer: boolean;
   feedback?: string[];
 }

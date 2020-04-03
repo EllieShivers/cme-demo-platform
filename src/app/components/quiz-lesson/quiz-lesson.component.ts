@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {LessonComponent, NavigateLessons} from '../lesson/lesson.component';
-import {QuizLesson, QuestionType} from '../../models/quiz-lesson';
+import {QuestionType, QuizLesson, TrueFalseQuestion} from '../../models/quiz-lesson';
 
 @Component({
   selector: 'app-quiz-lesson',
@@ -14,30 +14,20 @@ export class QuizLessonComponent extends LessonComponent implements OnInit {
   @Input() firstLessonInUnit: boolean;
   @Input() lastLessonInUnit: boolean;
 
+  selectedAnswers: any[] = [];
+
   constructor() {
     super();
   }
 
   ngOnInit() {
-  }
-
-  checkMCAnswer(value: string, currentAnswer: number, correctAnswer): string {
-    if((currentAnswer + 1) == correctAnswer) {
-      console.log('CORRECT: ' + value);
-      return 'Correct Answer';
-    }
-    else {
-      console.log('WRONG: ' + value);
-      return 'Incorrect Answer';
+    for (let i = 0; i < this.lesson.questions.length; i++) {
+      this.selectedAnswers.push('UNANSWERED');
     }
   }
 
-  checkTFAnswer(value, correctAnswer:boolean): string{
-    let parsedBoolean = (value === 'true');
-
-    if (parsedBoolean === correctAnswer) {
-      return 'Correct Answer';
-    } else return 'Incorrect Answer';
+  selectAndCheckAnswer(answer: any, questionIndex: number) {
+    this.selectedAnswers[questionIndex] = answer;
   }
 
   @Output() changedLesson = new EventEmitter<number>();
