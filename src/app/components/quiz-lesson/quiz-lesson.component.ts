@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {LessonComponent, NavigateLessons} from '../lesson/lesson.component';
-import {QuestionType, QuizLesson, TrueFalseQuestion} from '../../models/quiz-lesson';
+import {QuestionType, QuizLesson, TrueFalseQuestion} from '../../../../projects/simple-course-core/src/lib/models/quiz-lesson';
 
 @Component({
   selector: 'app-quiz-lesson',

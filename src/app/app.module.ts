@@ -11,6 +11,7 @@ import { TextLessonComponent } from './components/text-lesson/text-lesson.compon
 import { QuizLessonComponent } from './components/quiz-lesson/quiz-lesson.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatRadioModule} from '@angular/material';
+import { ModuleSelectorComponent } from './components/module-selector/module-selector.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {MatRadioModule} from '@angular/material';
     UnitComponent,
     VideoLessonComponent,
     TextLessonComponent,
-    QuizLessonComponent
+    QuizLessonComponent,
+    ModuleSelectorComponent
   ],
   imports: [
     BrowserModule,

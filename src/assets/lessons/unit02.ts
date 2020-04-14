@@ -1,7 +1,8 @@
-import {Unit} from '../../app/models/unit';
-import {Section, TextLesson} from '../../app/models/text-lesson';
-import {Citation} from '../../app/models/lesson';
-import {VideoLesson} from '../../app/models/video-lesson';
+import {Unit} from '../../../projects/simple-course-core/src/lib/models/unit';
+import {Section, TextLesson} from '../../../projects/simple-course-core/src/lib/models/text-lesson';
+import {Citation} from '../../../projects/simple-course-core/src/lib/models/lesson';
+import {VideoLesson} from '../../../projects/simple-course-core/src/lib/models/video-lesson';
+import {ImageAsset, ImageAssetPosition} from '../../../projects/simple-course-core/src/lib/models/image-asset';
 
 let lesson0201: TextLesson = new TextLesson(
   'Unit 2 Introduction',
@@ -231,8 +232,12 @@ let lesson0209: TextLesson = new TextLesson(
       'Types of Transition',
       [
         'As healthcare providers, you are most likely to encounter two general categories of transition. Social Transition and Medical Transition. Social transition is, as the name implies, focused on changing society’s or one own’s perception of oneself to match one’s gender identity. Changing pronouns, names, style of dress, and so forth are all examples of social transition. Medical transition is that which involves some form of medical intervention, such as hormone therapy or surgeries.',
-        '<div class="in-line-image-wrapper"><img class="in-line-image" src="assets/images/transitiontypes.png"></div>'
-      ]
+      ],
+      new ImageAsset(
+        'transitiontypes.png',
+        ImageAssetPosition.below,
+        'Table of common examples of Social and Medical transition.'
+      )
     ),
     new Section(
       'Transition is Not Required',

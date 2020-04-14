@@ -1,5 +1,5 @@
-import {Unit} from '../../app/models/unit';
-import {Section, TextLesson} from '../../app/models/text-lesson';
+import {Unit} from '../../../projects/simple-course-core/src/lib/models/unit';
+import {Section, TextLesson} from '../../../projects/simple-course-core/src/lib/models/text-lesson';
 
 let lesson0301: TextLesson = new TextLesson(
   'Unit 3 Introduction',

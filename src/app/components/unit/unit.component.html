@@ -10,6 +10,8 @@
         <a>{{i+1}}.
           <span *ngIf="lesson.type === lessonType.Video">VIDEO:</span>
           <span *ngIf="lesson.type === lessonType.Quiz">QUIZ:</span>
+          <span *ngIf="lesson.type === 1">VIDEO:</span>
+          <span *ngIf="lesson.type === 2">QUIZ:</span>
           {{ lesson.title }}
         </a>
       </li>
@@ -17,21 +19,21 @@
   </div>
   <div class="contentpane">
     <!--suppress AngularInvalidExpressionResultType -->
-    <app-text-lesson *ngIf="selectedLesson?.type === lessonType.Text"
+    <app-text-lesson *ngIf="selectedLesson?.type === lessonType.Text || selectedLesson?.type === 0"
                      [lesson]="selectedLesson"
                      [firstLessonInUnit]="firstLessonInUnit"
                      [lastLessonInUnit]="lastLessonInUnit"
                      (changedLesson)="onChangedLesson($event)">
     </app-text-lesson>
     <!--suppress AngularInvalidExpressionResultType -->
-    <app-video-lesson *ngIf="selectedLesson?.type === lessonType.Video"
+    <app-video-lesson *ngIf="selectedLesson?.type === lessonType.Video || selectedLesson?.type === 1"
                       [lesson]="selectedLesson"
                       [firstLessonInUnit]="firstLessonInUnit"
                       [lastLessonInUnit]="lastLessonInUnit"
                       (changedLesson)="onChangedLesson($event)">
     </app-video-lesson>
     <!--suppress AngularInvalidExpressionResultType -->
-    <app-quiz-lesson *ngIf="selectedLesson?.type === lessonType.Quiz"
+    <app-quiz-lesson *ngIf="selectedLesson?.type === lessonType.Quiz || selectedLesson?.type === 2"
                      [lesson]="selectedLesson"
                      [firstLessonInUnit]="firstLessonInUnit"
                      [lastLessonInUnit]="lastLessonInUnit"

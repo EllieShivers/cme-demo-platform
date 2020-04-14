@@ -1,7 +1,7 @@
-import {Unit} from '../../app/models/unit';
-import {TextLesson} from '../../app/models/text-lesson';
-import {LessonType} from '../../app/models/lesson';
-import {MultipleChoiceQuestion, QuizLesson, TrueFalseQuestion} from '../../app/models/quiz-lesson';
+import {Unit} from '../../../projects/simple-course-core/src/lib/models/unit';
+import {TextLesson} from '../../../projects/simple-course-core/src/lib/models/text-lesson';
+import {LessonType} from '../../../projects/simple-course-core/src/lib/models/lesson';
+import {MultipleChoiceQuestion, QuizLesson, TrueFalseQuestion} from '../../../projects/simple-course-core/src/lib/models/quiz-lesson';
 
 
 let lesson01: TextLesson = {
@@ -17,7 +17,7 @@ let lesson01: TextLesson = {
     {
       'header': 'DISCLAIMER',
       'body': [
-        '<strong>This version of this unit was written by a non-clinician as a minimum viable product for demonstrative purposes. This should not be taken to be authoritative nor inform actual recommendations. Please consult the referenced papers and standards directly.</strong>'
+        '<strong>This version of this unit was written by a non-clinician as a minimum viable product for demonstrative purposes and to provide a framework for future content development. This contents here should not inform clinical care. Please consult the referenced papers and standards directly.</strong>'
       ]
     }
   ]

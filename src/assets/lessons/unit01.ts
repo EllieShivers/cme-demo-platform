@@ -1,9 +1,9 @@
-import {TextLesson} from '../../app/models/text-lesson';
-import {VideoLesson} from '../../app/models/video-lesson';
-import {Unit} from '../../app/models/unit';
-import {LessonType} from '../../app/models/lesson';
-import {Position} from '../../app/models/image-asset';
-import {MultipleChoiceQuestion, QuizLesson, TrueFalseQuestion} from '../../app/models/quiz-lesson';
+import {TextLesson} from '../../../projects/simple-course-core/src/lib/models/text-lesson';
+import {VideoLesson} from '../../../projects/simple-course-core/src/lib/models/video-lesson';
+import {Unit} from '../../../projects/simple-course-core/src/lib/models/unit';
+import {LessonType} from '../../../projects/simple-course-core/src/lib/models/lesson';
+import {ImageAssetPosition} from '../../../projects/simple-course-core/src/lib/models/image-asset';
+import {MultipleChoiceQuestion, QuizLesson, TrueFalseQuestion} from '../../../projects/simple-course-core/src/lib/models/quiz-lesson';
 
 let lesson0101: TextLesson =
   {
@@ -17,7 +17,7 @@ let lesson0101: TextLesson =
         ],
         imageAsset: {
           'fileName': 'transgenderprideflag.jpg',
-          'position': Position.right,
+          'position': ImageAssetPosition.right,
           'altText': 'Transgender Pride Flag',
           'caption': 'Transgender Pride Flag'
         }
@@ -125,7 +125,7 @@ let lesson0104: TextLesson = {
         'The relationship between being transgender and nonbinary also deserves extra consideration, and this will be a topic that is returned to throughout the course. While many, if not most, people who identify as nonbinary also identify as transgender, this is not always the case. This illustrates a prime example of why approaching people individually is important. Some transgender people are nonbinary, some transgender people are binary. Some nonbinary people identify as transgender, some do not. Note that neither of these terms is indicative of whether or not someone is seeking medical transition, which will be discussed further in the following units as well.'],
       imageAsset: {
         'fileName': 'venndiagram.jpg',
-        'position': Position.below,
+        'position': ImageAssetPosition.below,
         'altText': 'Venn Diagram of Transgender and Nonbinary Overlap',
         'caption': 'This diagram is for illustrative purposes only and does not represent actual data.'
       }

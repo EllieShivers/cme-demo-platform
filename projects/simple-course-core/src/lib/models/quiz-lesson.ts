@@ -17,6 +17,7 @@ interface Question {
 }
 
 export class MultipleChoiceQuestion implements Question {
+
   constructor(questionText: string, possibleAnswers: string[], correctAnswer: number, feedback: string[]) {
     this.questionType = QuestionType.MultipleChoice;
     this.questionText = questionText;

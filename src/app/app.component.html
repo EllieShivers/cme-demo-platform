@@ -1,16 +1,19 @@
 <div class="outerwrapper">
   <div class="container">
+
     <div class="menu">
-      <ul>
+      <span class="menu-icon" (click)="toggleHideMenu()">☰</span>
+
+      <ul id="menu-list" *ngIf="!menuHidden">
         <li>
           <a (click)="openFrontPage()">
             Return to Front Page
           </a>
           <hr>
         </li>
-        <li *ngFor="let unit of course, let i = index">
+        <li *ngFor="let unit of course.units, let i = index">
           <a (click)="selectUnit(unit)">
-          <span class="menu-unit-number">Unit {{i + 1}}</span> <br>
+            <span class="menu-unit-number">Unit {{i + 1}}</span> <br>
             {{unit.title}}
           </a>
         </li>
@@ -18,7 +21,7 @@
     </div>
     <div class="contentpane">
       <app-unit [unit]="selectedUnit" *ngIf="selectedUnit"></app-unit>
-      <app-main-page *ngIf="!selectedUnit"></app-main-page>
+      <app-main-page *ngIf="!selectedUnit" [course]="course"></app-main-page>
     </div>
   </div>
 </div>

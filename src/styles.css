@@ -30,10 +30,11 @@ body {
   padding-top: 40px;
   overflow-y: auto;
   background: #035E7B;
-  flex-basis: 15%;
+  flex-basis: auto;
   flex-shrink: 0;
   flex-grow: 0;
 }
+
 
 .contentpane {
   overflow-y: auto;
@@ -42,6 +43,7 @@ body {
 }
 
 .menu ul {
+  margin-top: 50px;
   list-style: none;
   font-family: "Century Gothic", serif;
   font-size: 18px;
@@ -131,4 +133,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   margin-bottom: 10px;
   margin-top: 0;
   padding: 0;
+}
+
+.menu-icon {
+  font-size: xx-large;
+  cursor: pointer;
+  margin: 5px;
+  text-align: center;
+  color: white;
+}
+
+.menu-icon:hover {
+  color: white;
+  text-shadow: white 0 0 5px;
 }

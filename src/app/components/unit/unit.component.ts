@@ -1,6 +1,6 @@
 import {Component, HostListener, Input, OnChanges, OnInit} from '@angular/core';
-import {Unit} from '../../models/unit';
-import {Lesson, LessonType} from '../../models/lesson';
+import {Unit} from '../../../../projects/simple-course-core/src/lib/models/unit';
+import {Lesson, LessonType} from '../../../../projects/simple-course-core/src/lib/models/lesson';
 import {NavigateLessons} from '../lesson/lesson.component';
 
 @Component({

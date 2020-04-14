@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {VideoLesson} from '../../models/video-lesson';
+import {VideoLesson} from '../../../../projects/simple-course-core/src/lib/models/video-lesson';
 import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
 import {LessonComponent, NavigateLessons} from '../lesson/lesson.component';
 

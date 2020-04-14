@@ -1,8 +1,8 @@
-import {Unit} from '../../app/models/unit';
-import {QuestionType} from '../../app/models/quiz-lesson';
-import {LessonType} from '../../app/models/lesson';
-import {TextLesson} from '../../app/models/text-lesson';
-import {Position} from '../../app/models/image-asset';
+import {Unit} from '../../../projects/simple-course-core/src/lib/models/unit';
+import {QuestionType} from '../../../projects/simple-course-core/src/lib/models/quiz-lesson';
+import {LessonType} from '../../../projects/simple-course-core/src/lib/models/lesson';
+import {TextLesson} from '../../../projects/simple-course-core/src/lib/models/text-lesson';
+import {ImageAssetPosition} from '../../../projects/simple-course-core/src/lib/models/image-asset';
 
 let lesson01: TextLesson = {
   "title": "Unit 5 Introduction",
@@ -166,7 +166,7 @@ let lesson05: TextLesson = {
       ],
       'imageAsset': {
         'fileName': 'genderandsexualorientationchart.png',
-        position: Position.below,
+        position: ImageAssetPosition.below,
         altText: 'Sexual Orientation in Relation to Gender',
         caption: 'Sexual Orientation in Relation to Gender'
       }

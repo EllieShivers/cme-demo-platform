@@ -1,8 +1,8 @@
-import {Unit} from '../../app/models/unit';
-import {TextLesson} from '../../app/models/text-lesson';
-import {LessonType} from '../../app/models/lesson';
-import {MultipleChoiceQuestion, QuizLesson, TrueFalseQuestion} from '../../app/models/quiz-lesson';
-import {Position} from '../../app/models/image-asset';
+import {Unit} from '../../../projects/simple-course-core/src/lib/models/unit';
+import {TextLesson} from '../../../projects/simple-course-core/src/lib/models/text-lesson';
+import {LessonType} from '../../../projects/simple-course-core/src/lib/models/lesson';
+import {MultipleChoiceQuestion, QuizLesson, TrueFalseQuestion} from '../../../projects/simple-course-core/src/lib/models/quiz-lesson';
+import {ImageAssetPosition} from '../../../projects/simple-course-core/src/lib/models/image-asset';
 
 
 let lesson01: TextLesson = {
@@ -138,7 +138,7 @@ let lesson05: TextLesson = {
       'body': [
         'The Gay or Trans Panic Defense is an accepted legal defense which blames the defendant’s action in a criminal trial on the victim, including against murder. As recently as 2019 it was successfully used in a murder case in Louisiana by James Dixon regarding the murder of a 21-year-old transgender girl, Islan Nettles. There is an effort to introduce legislation to ban the defense from LGBTQ+ and Trans rights groups, but so far it remains legal in an overwhelming 42 states.'
       ],
-      'imageAsset': { fileName: 'bannedtranspanicstates.png', position: Position.below, caption: 'States in which the Gay/Trans Panic Defense is banned.', altText: 'Map of the states in which the gay/trans panic defense is banned.' }
+      'imageAsset': { fileName: 'bannedtranspanicstates.png', position: ImageAssetPosition.below, caption: 'States in which the Gay/Trans Panic Defense is banned.', altText: 'Map of the states in which the gay/trans panic defense is banned.' }
     },
     {
       'header': 'Bathroom Bills',

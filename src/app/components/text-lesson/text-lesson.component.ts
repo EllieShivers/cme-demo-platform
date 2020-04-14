@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {TextLesson} from '../../models/text-lesson';
+import {TextLesson} from '../../../../projects/simple-course-core/src/lib/models/text-lesson';
 import {LessonComponent, NavigateLessons} from '../lesson/lesson.component';
-import { Position } from '../../models/image-asset';
+import { ImageAssetPosition } from '../../../../projects/simple-course-core/src/lib/models/image-asset';
 
 @Component({
   selector: 'app-text-lesson',
@@ -14,7 +14,7 @@ export class TextLessonComponent extends LessonComponent implements OnInit {
   @Input() firstLessonInUnit: boolean;
   @Input() lastLessonInUnit: boolean;
 
-  position = Position;
+  position = ImageAssetPosition;
 
   constructor() {
     super();
