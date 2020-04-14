@@ -4,6 +4,7 @@ import {QuestionType} from '../../../projects/simple-course-core/src/lib/models/
 export const unit07 =
   {
     "title": "Cultivating Inclusivity",
+    "order": 7,
     "lessons": [
       {
         "title": "Unit 7 Introduction",
