@@ -8,7 +8,7 @@ export const unit07 =
     "lessons": [
       {
         "title": "Unit 7 Introduction",
-        "type": 0,
+        "type": LessonType.Text,
         "sections": [
           {
             "header": "Welcome to Unit 7",
@@ -27,7 +27,7 @@ export const unit07 =
       },
       {
         "title": "A Welcoming Environment",
-        "type": 0,
+        "type": LessonType.Text,
         "sections": [
           {
             "header": "What makes a \"Welcoming Wnvironment\"?",
@@ -40,7 +40,7 @@ export const unit07 =
       },
       {
         "title": "Inclusive Messaging Examples",
-        "type": 0,
+        "type": LessonType.Text,
         "sections": [
           {
             "header": "Pamphlets and Media",
@@ -66,7 +66,7 @@ export const unit07 =
       },
       {
         "title": "Make Yourself Findable",
-        "type": 0,
+        "type": LessonType.Text,
         "sections": [
           {
             "header": "Mention Inclusivity or Transgender/Nonbinary Care on your Website",
@@ -86,7 +86,7 @@ export const unit07 =
       },
       {
         "title": "Political and Religious Messaging",
-        "type": 0,
+        "type": LessonType.Text,
         "sections": [
           {
             "header": "Political Messaging",
@@ -105,7 +105,7 @@ export const unit07 =
       },
       {
         "title": "Support Groups",
-        "type": 0,
+        "type": LessonType.Text,
         "sections": [
           {
             "header": "The Need for Support Groups",
@@ -143,7 +143,7 @@ export const unit07 =
       },
       {
         "title": "Patient Interaction",
-        "type": 0,
+        "type": LessonType.Text,
         "sections": [
           {
             "header": "If you don't know, ask! ... And then write it down.",
@@ -167,7 +167,7 @@ export const unit07 =
       },
       {
         "title": "Out in the World",
-        "type": 0,
+        "type": LessonType.Text,
         "sections": [
           {
             "header": "Speak up!",
@@ -186,10 +186,10 @@ export const unit07 =
       },
       {
         "title": "Reaching Understanding",
-        "type": 2,
+        "type": LessonType.Quiz,
         "questions": [
           {
-            "questionType": "True or False",
+            "questionType": QuestionType.TrueFalse,
             "questionText": "Healthcare providers are in a unique position to provide particularly influential allyship.",
             "correctAnswer": true,
             "feedback": [
@@ -197,7 +197,7 @@ export const unit07 =
             ]
           },
           {
-            "questionType": "Multiple Choice",
+            "questionType": QuestionType.MultipleChoice,
             "questionText": " Which of the following are reasons someone may be unable or unwilling to attend in-person support groups? ",
             "possibleAnswers": [
               "Some disabilities.",
@@ -211,7 +211,7 @@ export const unit07 =
             ]
           },
           {
-            "questionType": "True or False",
+            "questionType": QuestionType.TrueFalse,
             "questionText": "You can safely assume this course will always be up to date on transgender/nonbinary issues, and take the contents herein as gospel.",
             "correctAnswer": false,
             "feedback": [
@@ -222,7 +222,7 @@ export const unit07 =
       },
       {
         "title": "Unit 7 Conclusion",
-        "type": 0,
+        "type": LessonType.Text,
         "sections": [
           {
             "header": "End of Course",
