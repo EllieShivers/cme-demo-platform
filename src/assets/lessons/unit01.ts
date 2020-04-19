@@ -40,13 +40,20 @@ let lesson0101: TextLesson =
 let lesson0102: VideoLesson = {
   type: LessonType.Video,
   title: 'Why does this matter? The Story of Tyra Hunter',
-  videoEmbedCode: '<!--suppress HtmlDeprecatedAttribute --><iframe width="560" height="315" src="https://www.youtube.com/embed/t7xHamn5inQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n',
+  videoEmbedCode: '<!--suppress HtmlDeprecatedAttribute --><iframe width="560" height="315" src="https://www.youtube.com/embed/YNBr_gOET8M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n',
   transcript: [
-    'So, why does this course matter? Unfortunately, there is a long history of distrust on the part of the transgender and nonbinary community when it comes to healthcare providers, after years of encountering barriers to care. A systematic review of the literature performed by Luisa Kcomt from the University of Windsor, Ontario showed consistent findings across a number of studies indicating that many have encountered blatant discrimination when attempting to access healthcare, including but not limited to the outright refusal of care. Patients additionally were found to often be required to educate their physicians about transgender issues and face ignorance of the proper language in interactions with their providers.',
-    'Sometimes, the discrimination in accessing care have even had deadly results. Perhaps the most notorious case of discrimination occurred in Washington DC, in 1995. 24-Year-old Tyra Hunter was a passenger in a car accident and suffered severe injuries. When emergency crews arrived on the scene, they began cutting away her clothing to provide treatment, and discovered that Ms. Hunter had a penis—that she was transgender. Eyewitnesses report that the person treating Ms. Hunter immediately backed away shouting obscenities directed at her. It is then reported that they stood around and refused treatment for up to 7 minutes, while Tyra Hunter lay there severely injured, repeatedly mocking her despite the onlookers pleading for them to provide aid. Eventually a supervisor showed up and provided treatment and Tyra Hunter was brought to DC General Hospital. There, she was refused treatment by a physician and treated under protocol as a drug addict, despite no evidence.',
+    'So, why does this course matter?',
+'Note that this video uses the term "transgender" to accurately reflect the language in the cited studies. While this is presumed to be inclusive of all nonbinary people, some nonbinary people do not identify as transgender and this identification should be respected at all times, which is why you will see this course attempt to use terminology such as transgender and/or nonbinary when not in direct reference to other work.',
+    'In 2018, a study was published in the journal Social Work in Health Care by Luisa Kcomt providing a systematic review of literature on the topic of transgender healthcare and discrimination. The study showed profound discrimination encountered by transgender individuals accessing or attempting to access healthcare.',
+    'While numbers showed large variance between studies, the following numbers provide some insight into how serious the issue can be:<ul><li>- 5% to 41% reported being denied care outright. (AVG: 20%)</li><li>- 40% do not have a regular PCP.</li><li>- 20% to 50% encountered lack of knowledge or had to educate their PCP. (AVG: 31%)</li><li>- 21% to 57% were not out to their health care provider (Reason not given. AVG: 36%)</li><li>- 6% to 28% were verbally harassed in a health care setting. (AVG: 17%)</li><li>- 1% to 2% were physically attacked in a health care setting. (AVG: 1.5%)</li></ul>',
+    'While the largest outlying figures skewed towards being from studies performed during the first part of the 2010s, the more recent studies still showed overwhelming discrimination. While progress has been made, there is still need for far greater improvement.',
+    'Citing other research in the field, Ms. Kcomt also provides a concise summary of why a course such as this is needed.',
+    '"Health-care providers’ attitudes about sexual orientation, gender identity, and gender expression affect the way that they relate to LGBT patients. Whether intended or not, health-care providers can display homophobic, heterosexist, transphobic, and cisgenderist attitudes and behaviors which mirror societal values. These biases limit their ability to create a therapeutic alliance with LGBT patients and create a structural barrier to accessing quality care. Researchers and practitioners have underscored the need to develop cultural competency and capacity building in serving LGBT clients in general and transgender individuals in particular."',
+    'Unfortunately, this discrimination has created a strong distrust between many members of the transgender/nonbinary community and health care providers. Transgender/nonbinary people many times don\'t know what to expect in accessing healthcare, or coming out to their healthcare providers. Even when an individual has not encountered discrimination, there is a very good chance they know many people who have. There is perhaps no case that encapsulates discrimination and the reason for this distrust better than that of Tyra Hunter.',
+    'In 1995, in Washington DC, 24-Year-old Tyra Hunter was a passenger in a car accident and suffered severe injuries. When emergency crews arrived on the scene, they began cutting away her clothing to provide treatment, and discovered that Ms. Hunter had a penis---that she was transgender. Eyewitnesses report that the person treating Ms. Hunter immediately backed away, shouting obscenities directed at her. It is then reported that they stood around and refused treatment for up to 7 minutes, while Tyra Hunter lay there severely injured, repeatedly mocking Ms. Hunter despite the onlookers pleading for them to provide aid.',
+    'Eventually a supervisor showed up and provided treatment and Tyra Hunter was brought to DC General Hospital. There, she was refused treatment by a physician and treated under protocol as a drug addict, despite no evidence this was the case.',
     'Tyra Hunter died at 5:20 PM of blunt force trauma.',
-    'Tyra Hunter’s mother filed and won a wrongful death suit against the city for $2.9 million dollars. Expert testimony during the trial stated that had Ms. Hunter received proper care at either the scene of the accident or DC General, she would have had an 86% chance of survival.',
-    'These are Washington Post articles from 1995 and 1998 discuss the aftermath of the case, and, ironically given the headline shown on the left, presented an example of final indignity performed against Ms. Hunter as she was repeatedly called by her name given at birth and discussed as a man in a dress.'
+    'Tyra Hunter’s mother filed and won a wrongful death suit against the city and was awarded $2.9 million dollars. Expert testimony during the trial stated that had Ms. Hunter received proper care at either the scene of the accident or DC General, she would have had an 86% chance of survival.'
   ],
   citations: [
     {
@@ -59,6 +66,43 @@ let lesson0102: VideoLesson = {
     {
       apaString: 'Fern, M. E., & Ez. (1998, December 12). DEATH SUIT COSTS CITY $2.9 MILLION. Retrieved from https://www.washingtonpost.com/archive/local/1998/12/12/death-suit-costs-city-29-million/b8ab4d34-1907-463c-b5d5-64ec00dee2a1/',
       link: 'https://www.washingtonpost.com/archive/local/1998/12/12/death-suit-costs-city-29-million/b8ab4d34-1907-463c-b5d5-64ec00dee2a1/'
+    },
+    {
+      apaString: 'Adams, M. (2016). An intersectional approach to services and care for LGBT elders. Journal of the American Society on Aging, 40(2), 94–100.'
+    },
+    {
+      apaString: 'Ansara, Y. G. (2015). Challenging cisgenderism in the ageing and aged care sector: Meeting the needs of older people of trans and/or non-binary experience. Australasian Journal of Ageing, 34(2), 14–18. doi:10.1111/ajag.12278'
+    },
+    {
+      apaString: 'Hillman, J. (2016). Understanding care disparities among older lesbian, gay, bisexual, and transgender (LGBT) adults: Recommendations for culturally competent care. Journal of Gerontology and Geriatric Research, 5(5), 1–2. doi:10.4172/2167-7182.1000345'
+    },
+    {
+      apaString: 'Moone, R. P., Croghan, C. F., & Olson, A. M. (2016). Why and how providers must build culturally competent, welcoming practices to serve LGBT elders. American Society on Aging, 40(2), 73–77.'
+    },
+    {
+      apaString: 'National Resource Center on LBGT Aging. (2012). Inclusive services for LGBT older adults: A practical guide to creating welcoming agencies. Retrieved from http://www.lgbtagingcenter.org/resources/resource.cfm?r=487',
+      link: 'http://www.lgbtagingcenter.org/resources/resource.cfm?r=487'
+    },
+    {
+      apaString: 'Van Den Bergh, N., & Crisp, C. (2004). Defining culturally competent practice with sexual minorities: Implications for social work education and practice. Journal of Social Work Education, 40(2), 221–238. doi:10.1080/10437797.2004.10778491'
+    },
+    {
+      apaString: 'Wheeler, D. P., & Dodd, S. (2011). LGBTQ capacity building in health care systems: A social work perspective. Health & Social Work, 36(4), 307–309'
+    },
+    {
+      apaString: 'Wilkerson, J. M., Rybicki, S., Barber, C. A., & Smolenski, D. J. (2011). Creating a culturally competent clinical environment for LGBT patients. Journal of Gay & Lesbian Social Services, 23(3), 376–394. doi:10.1080/10538720.2011.589254'
+    },
+    {
+      apaString: 'Zuzelo, P. R. (2014). Improving nursing care for lesbian, bisexual, and transgender women. Journal of Obstetric, Gynecological and Neonatal Nursing, 43(4), 520–530. doi:10.1111/1552-6909.12477'
+    },
+    {
+      apaString: 'Hyderi, A., Angel, J., Madison, M., Perry, L. A., & Hagshenas, L. (2016). Transgender patients: Providing sensitive care. The Journal of Family Practice, 65(7), 450–461.'
+    },
+    {
+      apaString: 'Marshall, A., Pickle, S., & Lawlis, S. (2017). Transgender medicine curriculum: Integration into an organ system–Based preclinical program. MedEdPORTAL Publications.13,10536. doi:10.15766/mep_2374-8265.10536'
+    },
+    {
+      apaString: 'Porter, K. E., Brennan-Ing, M., Chang, S. C., Dickey, L. M., Singh, A. A., Bower, K. L., & Witten, T. M. (2016). Providing competent and affirming services for transgender and gender nonconforming older adults. Clinical Gerontologist, 39(5), 366–388. doi:10.1080/07317115.2016.1203383'
     }
   ]
 };
@@ -79,7 +123,7 @@ let lesson0103: TextLesson = {
       body: [
         'This paper details a study of 30 transgender individuals and 11 physicians, using interviews and focus groups. The paper’s “overwhelming finding” was that there is a lack of provider knowledge, resulting in denial of care and impacting general care. It also identifies transphobia as another barrier to care. The authors go on to suggest several key recommendations, which will be discussed further in the concluding section of this unit.'
       ]
-    }
+    },
     //TODO: Add more papers here.
   ],
   citations: [
@@ -152,9 +196,9 @@ let lesson0105: QuizLesson = new QuizLesson(
     new MultipleChoiceQuestion(
       'Presuming they all self identify as transgender, which of the following people should be considered transgender? ',
       [
-        'Debbie (she/her), who was assigned male at birth, received an official diagnosis from a mental health professional, and has undergone genital .',
-        'Sam (he/him), who was assigned female at birth and identifies as a trans man, but does desire hormone therapy or surgeries.',
-        'Skye (they/them), who identifies as nonbinary and was born with an intersex condition',
+        'Debbie (she/her), who was assigned male at birth, received an official diagnosis from a mental health professional, and has undergone multiple surgeries.',
+        'Sam (he/him), who was assigned female at birth and identifies as a trans man, but does not desire hormone therapy or surgeries.',
+        'Sarah (they/them), who was assigned female at birth, identifies as nonbinary, and presents feminine.',
         'All of the above.'
       ],
       4,
