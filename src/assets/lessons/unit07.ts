@@ -30,7 +30,7 @@ export const unit07 =
         "type": LessonType.Text,
         "sections": [
           {
-            "header": "What makes a \"Welcoming Wnvironment\"?",
+            "header": "What makes a \"Welcoming Environment\"?",
             "body": [
               "To a transgender and/or nonbinary person, a welcoming environment is one in which they can feel like they can just be themselves without judgment or reservation. That is to say, an environment that is explicitly affirming. Many transgender and/or nonbinary people learn the hard way how to spot the difference between an environment that is affirming and seeing through those which are not, or which only pretend to be.",
               "It is never enough simply to declare your office or practice as inclusive, you must follow through and prove to your patients that this is an area in which they can feel safe. This doesn't need to be a grand gesture (in fact any overly grand gesture may be counter productive) and can be as simple as providing pamphlets in your waiting room about LGBTQ+ and transgender/nonbinary specific topics. The following lesson discusses a few recommendations to get started."
